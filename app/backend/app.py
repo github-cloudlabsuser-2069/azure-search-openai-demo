@@ -1,3 +1,19 @@
+"""
+This file contains the implementation of a Flask application that serves as a backend for an Azure Search OpenAI demo.
+The application provides various routes for serving static files, handling user authentication, and processing user requests for asking questions and having conversations.
+The routes include:
+- "/" - serves the index.html file
+- "/redirect" - empty page for login redirect
+- "/favicon.ico" - serves the favicon.ico file
+- "/assets/<path:path>" - serves static assets
+- "/content/<path>" - serves content files from blob storage
+- "/ask" - handles POST requests for asking questions
+- "/chat" - handles POST requests for having conversations
+- "/auth_setup" - sends MSAL.js settings to the client UI
+- "/config" - returns configuration settings for the client UI
+
+The file also imports various modules and defines several constants and variables used throughout the application.
+"""
 import dataclasses
 import io
 import json
